@@ -1,0 +1,92 @@
+.titulo{
+    margin: 0 auto;
+    width: 90%;    
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;   
+    border: 5px dotted #E65C00;
+    background: -webkit-linear-gradient(#DF7401, #FAAC58);
+    background: -moz-linear-gradient(#DF7401, #FAAC58);
+    background: -o-linear-gradient(#DF7401, #FAAC58);
+}
+table.estiloTabla {
+    margin: 0 auto;
+    font-family: "Arial", sans-serif;
+    border-collapse: separate;
+    border-spacing: 0.2em;
+    background-color: #ececff;
+    width: 50%;
+    color: #000000;
+    font-size: 12px;
+    box-shadow: 1px 1px 2px #BBBBBB;
+    -webkit-box-shadow: 1px 1px 5px #bbb;
+    -moz-box-shadow: 1px 1px 5px #bbb;
+    -o-box-shadow: 1px 1px 5px #bbb;
+}
+
+table caption {
+    margin: 5px 0;
+    text-align: center;
+    font-size: 12.5pt;
+    letter-spacing: 2px;
+}
+
+tr.cabeceraTabla th {
+    font-weight: bold !important;
+}
+
+.estiloTabla td {
+    border: 1px solid #E2E2E2;
+    border-top: 1px solid #b9b9b9 !important;
+    border-bottom: 1px solid #b9b9b9 !important;
+    padding: 10px;
+    text-align: center;    
+}
+
+.estiloTabla th {
+    border-left: 1px solid #d1d1d1 !important;
+    padding: 10px;
+    font-weight: normal !important;
+}
+
+.estiloTabla td:first-child, .estiloTabla th:first-child {
+    border-left: none;
+}
+
+.estiloTabla th {
+    background-color: #e0ffc2;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FF8000), to(#F7BE81));
+    background-image: -webkit-linear-gradient(top, #FF8000, #F7BE81);
+    background-image: -moz-linear-gradient(top, #FF8000, #F7BE81);
+    background-image: -ms-linear-gradient(top, #FF8000, #F7BE81);
+    background-image: linear-gradient(top, #FF8000, #F7BE81);
+}
+
+.estiloTabla tr:hover {
+    background: #F5D0A9;
+    transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;    
+}
+
+table tbody tr th a {
+    color: #7D7DFF !important;
+    font-weight: normal;
+}
+
+table  tbody tr th a:hover {
+    color: #F16266 !important;
+    font-weight: normal;
+}
+
+@media screen and (max-width: 999px) {
+    form {
+        color: #ffffff;
+    }
+    table.estiloTabla {
+        width: 100%;
+    }
+}
