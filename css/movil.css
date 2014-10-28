@@ -1,0 +1,154 @@
+@media screen and (max-width : 999px)
+{
+    div{
+        
+        
+        
+    }
+    body
+    {
+        background: url("../img/fondo.jpg");
+        background-size: 100%;
+        color: black;
+        margin:0px 0px 0px 0px;
+        width: 100%;
+    }
+    img
+    {
+        border: 0;
+    }
+    ul
+    {
+       list-style-type:none;
+        margin:0;
+        margin-top: 0.8em;
+        margin-bottom: 1em;
+        padding:0;
+    }
+    #content
+    {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+    }
+    #header img
+    {
+        width: 100%;
+    }
+    
+    #menu img
+    {
+        margin: 2%;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width: 44%;
+        
+    }
+    #menu img.grande
+    {
+        width: 94%;
+        
+    }
+    #menu li
+    {                
+        display: inline;
+        
+    }
+    #nav
+    {
+        text-align: right;
+    }
+    #nav li 
+    {
+        display:inline;
+    }
+    #nav img 
+    {
+       margin: 3px;
+       width: 15%;
+    }
+}
+
+
+/*PC*/
+
+@media screen and (min-width : 1000px)
+    {
+    body
+    {
+        background: url("../img/fondo.jpg");
+        background-size: 100%;
+        color: white;
+        margin:0px 0px 0px 0px;
+        width: 100%;
+    }
+    img
+    {
+        border: 0;
+    }
+    ul
+    {
+        list-style-type:none;
+        margin:0;
+        padding:0;
+    }
+    #content
+    {
+        font-family: arial, sans-serif;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+    #header
+    {
+        margin: 0;
+        width: 100%;
+    }
+    #header img
+    {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    #menu
+    {
+        margin: 0 auto;
+        width: 80%;
+    }
+    #menu img
+    {
+        width: 20%;
+        margin: 2%;
+        
+    }
+       #menu img.grande
+    {
+        width: 45%;
+        
+    }
+    #menu li
+    {                
+        display: inline;
+    }
+    #nav
+    {
+        margin: 3em auto 3em auto;
+        padding: 1em;
+        width: 45%
+    }
+    #nav li 
+    {
+        display:inline;
+        margin-right: 2em;
+        margin-left: 2em;
+    }
+    #nav img 
+    {
+        
+        width: 10%;
+    }
+    
+}
