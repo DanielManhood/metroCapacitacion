@@ -1,0 +1,135 @@
+.titulo{
+    margin: 0 auto;
+    width: 90%;    
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;   
+    border: 5px dotted #E65C00;
+    background: -webkit-linear-gradient(#DF7401, #FAAC58);
+    background: -moz-linear-gradient(#DF7401, #FAAC58);
+    background: -o-linear-gradient(#DF7401, #FAAC58);
+}
+
+.tabla{
+    margin: 0 auto;
+    background: #fff;    
+    color: #000;
+    width: 90%;
+    font-size: 12px;
+    text-align: center;
+    font-family: Arial;    
+}        
+.tabla th{
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
+td, th, .tabla{
+    border-collapse: collapse;
+    border: 2px #e0ffc2 solid;    
+}
+.tabla tr:hover{
+    background: #fcefa1;
+}
+
+.tabla th{
+    background: -webkit-linear-gradient(#DF7401, #FAAC58);
+    background: -moz-linear-gradient(#DF7401, #FAAC58);
+    background: -o-linear-gradient(#DF7401, #FAAC58);
+}
+@media screen and (max-width : 999px){
+    .titulo{
+        width: 90%;
+    }
+    table, thead, tr, th, tbody, td{        
+        display: block;
+        background: #fff;
+    }
+    thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    td{
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;             
+    }
+    td:hover{
+        background-color: #fcefa1;
+    }
+    td:nth-of-type(1){
+        font-size: 20px;
+        font-weight: bolder;
+        color: #fff;
+        background: -webkit-linear-gradient(#DF7401, #FAAC58);
+        background: -moz-linear-gradient(#DF7401, #FAAC58);
+        background: -o-linear-gradient(#DF7401, #FAAC58);
+    }
+    td:before{
+        font-weight: bold;
+        position: absolute;                
+        top: 0px;
+        left: 0px;
+        width: 45%;
+        padding-right: 0px;                
+/*                white-space: nowrap;*/
+    }            
+            
+    td:nth-of-type(2):before{
+        content: "Nombre";
+    }
+    td:nth-of-type(3):before{
+        content: "Puesto";
+    }
+    td:nth-of-type(4):before{
+        content: "Adscripción";                    
+    }
+    td:nth-of-type(5):before{
+        content: "Ubicación"
+    }
+    td:nth-of-type(6):before{
+        content: "Coordinación";
+    }
+    td:nth-of-type(7):before{
+        content: "Plaza";
+    }
+    td:nth-of-type(8):before{
+        content: "Plaza Siden";
+    }
+    td:nth-of-type(9):before{
+        content: "Calidad";                
+    }
+    td:nth-of-type(10):before{
+        content: "Area";                
+    }
+    td:nth-of-type(11):before{
+        content: "Horario";
+    }
+    td:nth-of-type(12):before{
+        content: "Dias de descanso";
+    }
+    td:nth-of-type(13):before{
+        content: "Último grado de estudios"
+    }
+    td:nth-of-type(14):before{
+        content: "¿Estudios concluidos?"
+    }
+    td:nth-of-type(15):before{
+        content: "Extensión";
+    }
+    td:nth-of-type(16):before{
+        content: "Correo electrónico"
+    }
+    td:nth-of-type(17):before{
+        content: "¿Es instructor?"
+    }
+    td:nth-of-type(18):before{
+        content: "¿Curso de formación?"
+    }
+    td:nth-of-type(19):before{
+        content: "Cursos impartidos"
+    }
+}
