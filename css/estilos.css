@@ -1,0 +1,89 @@
+.SelectStyle {
+	width: 220px;
+	position: relative;
+}
+ 
+select {
+	width: 100%;
+	background: #F3F3F3;
+	color: #585757;
+	padding: 5px;
+	font-size: 13px;
+	line-height: 100%;
+	border: 1px solid #C1C1C1;
+	border-radius: 0;
+	height: 30px;
+	-webkit-appearance: none;
+}
+ 
+option {
+	padding: 10px;
+}
+
+.SelectStyle:after {
+	width: 30px;
+	height: 30px;
+	display: block;
+	content: '';
+	position: absolute;
+	top: 0;right: 0;
+	pointer-events: none;
+	border: 1px solid #C1C1C1;
+	background:#ebebeb;
+	background-image: url('http://www.ideup.com/sites/all/themes/ideup/img/bullet--arrow--down.gif');
+	background-image: url('http://www.ideup.com/sites/all/themes/ideup/img/bullet--arrow--down.gif'), -moz-linear-gradient(top,#dfdfdf 0%,#f6f6f6 100%);
+	background-image: url('http://www.ideup.com/sites/all/themes/ideup/img/bullet--arrow--down.gif'), -webkit-gradient(linear,left top,left bottom,color-stop(0%,#dfdfdf),color-stop(100%,#f6f6f6));
+	background-image: url('http://www.ideup.com/sites/all/themes/ideup/img/bullet--arrow--down.gif'), -webkit-linear-gradient(top,#dfdfdf 0%,#f6f6f6 100%);
+	background-image: url('http://www.ideup.com/sites/all/themes/ideup/img/bullet--arrow--down.gif'), -o-linear-gradient(top,#dfdfdf 0%,#f6f6f6 100%);
+	background-image: url('http://www.ideup.com/sites/all/themes/ideup/img/bullet--arrow--down.gif'), -ms-linear-gradient(top,#dfdfdf 0%,#f6f6f6 100%);
+	background-image: url('http://www.ideup.com/sites/all/themes/ideup/img/bullet--arrow--down.gif'), linear-gradient(top,#dfdfdf 0%,#f6f6f6 100%);
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    alignment-adjust: central;
+    border-radius: 10px;
+    width: 300px;
+    height: min-content;
+    background: orange;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.estiloRadio {
+    border: 4px solid #F90;
+    position: relative;
+    background: #FFFFFF;
+    color: #000;
+}
+
+button.submit {
+    padding: 9px 17px;
+   font-family: Helvetica, Arial, sans-serif;
+   font-weight: bold;
+   line-height: 1;
+   color: #444;
+   border: none;
+   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.85);
+   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#bbb));
+   background-image: -moz-linear-gradient(0% 100% 90deg, #BBBBBB, #FFFFFF);
+   background-color: #fff;
+   border: 1px solid #f1f1f1;
+   border-radius: 10px;
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+button.submit:hover {
+	opacity:.65;
+	cursor: pointer; 
+	color: orangered;
+}
+button.submit:active {
+	border: 1px solid #222;
+	box-shadow: 0 0 10px 5px #444 inset;}
