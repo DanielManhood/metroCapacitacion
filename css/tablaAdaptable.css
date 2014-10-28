@@ -45,6 +45,7 @@ td, th, .tabla{
     table, thead, tr, th, tbody, td{        
         display: block;
         background: #fff;
+        font-size: 12px;
     }
     thead tr{
         position: absolute;
