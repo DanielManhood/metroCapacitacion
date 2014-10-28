@@ -309,7 +309,7 @@
     }
     
     function totalCapacitados($hacerConsulta) {  
-        require 'conexion.php'; 
+        require '../inc/conexion.php'; 
         $contarCursos = 0;
         $totalEnGerencia = mysql_num_rows($hacerConsulta);
         for ($i = 0; $i < $totalEnGerencia; $i++) {
