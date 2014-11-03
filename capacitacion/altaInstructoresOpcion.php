@@ -20,7 +20,7 @@
             <div id="menu">
                 <ul>       
                      <li><a href='altaInstructoresX.php'><img src="../img/busquedaexpe_1.png" class="grande"></a></li>
-                     <li><a href='busquedaNombre.php'><img src="../img/busquedanom_1.png" class="grande"></a></li>                                       
+                     <li><a href='busquedaInstructorNombre.php'><img src="../img/busquedanom_1.png" class="grande"></a></li>                                       
                 </ul>
             </div>
         </div>

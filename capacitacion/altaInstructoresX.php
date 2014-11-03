@@ -18,7 +18,7 @@
                 </ul>            
            </div>                     
             <?php
-                require '../inc/conexion.php';
+                require '../inc/conexion.php';                
             ?>
             <form id='busqueda' name='busqueda' action='altaInstructores.php' method='get'>
                 <ul>

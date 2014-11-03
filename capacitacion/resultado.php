@@ -11,7 +11,8 @@
             <div id="nav">
                 <ul>
                     <?php
-                        $dir = $_SERVER['REQUEST_URI'];                        
+                        require '../inc/conexion.php';
+                        $dir = $_SERVER['REQUEST_URI'];                                                
                         if(isset($dir) and !empty($dir)){
                             if(strstr($dir, "busquedaNombre.php")) {
                                 echo "<li><a href='busquedaNombre.php' title='Regresar'><img src='../img/baatras.png'></a></li>";
@@ -26,8 +27,7 @@
                 </ul>
                 <br>    
                 <br>
-                 <?php
-                    require '../inc/conexion.php';
+                 <?php                    
                     require 'claseEmpleado.php';
                     if(!isset($_GET['consulta']) || empty($_GET['consulta'])) {
                         echo "<div class='titulo'>NO SE HA INTRODUCIDO NINGÚN EXPEDIENTE</div>";

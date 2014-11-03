@@ -49,11 +49,11 @@
                         changeMonth: true,
                         changeYear: true
                     });
-                });
+                });                                            
         </script>
     </head>
     <?php        
-        require '../inc/conexion.php';        
+        require '../inc/conexion.php';                
         if(isset($_POST['curso']) and !empty($_POST['curso']) and isset($_POST['datepicker']) and !empty($_POST['datepicker']) and isset($_POST['datepicker2']) and !empty($_POST['datepicker2']) and isset($_GET['BI']) and !empty($_GET['BI'])) {                        
             $curso = $_POST['curso'];
             $iniCurso = $_POST['datepicker'];
@@ -72,7 +72,16 @@
         <div id="content">
             <div id="nav">
                 <ul>
-                    <li><a href="altaInstructoresOpcion.php" title="Regresar"><img src="../img/baatras.png"></a></li>
+                    <?php                   
+                        $dir = $_SERVER['REQUEST_URI'];                                                
+                        if(isset($dir) and !empty($dir)){                            
+                            if (strstr($dir, "busquedaInstructorNombre.php")) {
+                                echo "<li><a href='busquedaInstructorNombre.php' title='Regresar'><img src='../img/baatras.png'></a></li>";
+                            } else {
+                                echo "<li><a href='altaInstructoresX.php' title='Regresar'><img src='../img/baatras.png'></a></li>";
+                            }                                                                               
+                        }
+                    ?>                    
                     <li><a href="../menu.php" title="Inicio"><img src="../img/bahome.png"></a></li>
                     <li><a href="contacto.php" title="Ayuda"><img src="../img/baayuda.png"></a></li>
                     <li><a href="close.php" title="Salir"><img src="../img/baasalir.png"></a></li>
@@ -127,7 +136,7 @@
                                                 <td>$nombreCurso</td>
                                                 <td>$buIniCurso</td>
                                                 <td>$buFinCurso</td>
-                                                <td><a href='altaInstructores.php?id=$id&BI=$BI' onclick=\"alert('TEXTOVENTANA')\">Eliminar</a></td>    
+                                                <td><a href='altaInstructores.php?id=$id&BI=$BI'>Eliminar</a></td>    
                                             </tr>";
                                         
                                     }
