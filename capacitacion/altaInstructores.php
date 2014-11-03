@@ -66,22 +66,20 @@
             $cambiarStatus = "DELETE FROM cursosimpartidos WHERE id=$id;";
             $hacerCambioStatus = mysql_query($cambiarStatus); 
             $expediente = $_GET['BI'];
-        }    
+        } 
+        if(isset($_POST['instructor']) and !empty($_POST['instructor']) and isset($_POST['formacion']) and !empty($_POST['formacion']) and isset($_GET['BI']) and !empty($_GET['BI'])) {                
+                $instructor = $_POST['instructor'];
+                $formacion = $_POST['formacion'];
+                $expediente = $_GET['BI'];
+                $cambiarStatus = "UPDATE general SET instructor=$instructor, formacion=$formacion WHERE expediente=$expediente;";
+                $hacerCambioStatus = mysql_query($cambiarStatus);
+        }                
     ?>
     <body>
         <div id="content">
             <div id="nav">
                 <ul>
-                    <?php                   
-                        $dir = $_SERVER['REQUEST_URI'];                                                
-                        if(isset($dir) and !empty($dir)){                            
-                            if (strstr($dir, "busquedaInstructorNombre.php")) {
-                                echo "<li><a href='busquedaInstructorNombre.php' title='Regresar'><img src='../img/baatras.png'></a></li>";
-                            } else {
-                                echo "<li><a href='altaInstructoresX.php' title='Regresar'><img src='../img/baatras.png'></a></li>";
-                            }                                                                               
-                        }
-                    ?>                    
+                    <li><a href='altaInstructoresOpcion.php' title='Regresar'><img src='../img/baatras.png'></a></li>                            
                     <li><a href="../menu.php" title="Inicio"><img src="../img/bahome.png"></a></li>
                     <li><a href="contacto.php" title="Ayuda"><img src="../img/baayuda.png"></a></li>
                     <li><a href="close.php" title="Salir"><img src="../img/baasalir.png"></a></li>
@@ -100,7 +98,7 @@
                             $instructor = mysql_result($hacerConsultaInstructores, 0, "instructor");                            
                             if($instructor == 0){
                                 $instructor = "<font style='color: #DF0101'><b>NO</b></font>";                                
-                                echo "<form id='busqInstructores' name='busqInstructores' action='altaExitosa.php?expediente=$expediente' method='post' style='background-color: #fff; color: #000'>
+                                echo "<form id='busqInstructores' name='busqInstructores' action='altaInstructores.php?BI=$expediente' method='post' style='background-color: #fff; color: #000'>
                                     <div style='background-color: orange; color: #fff; border-top-left-radius: 10px; border-top-right-radius: 10px'>Cambiar status de instructor a $nombre con número de expediente: $expediente</div>
                                      <div style='color: #fff; background: #000'>¿Es instructor?: <br>$instructor</div>   
                                      <p>¿Asignar como instructor?</p>   
@@ -178,8 +176,7 @@
                     } else {
                         echo "<br><br>
                             <div class='titulo' style='width: 50%'>ERROR: No se ha tecleado un número</div>";
-                    }
-                    
+                    }                    
                 }
             ?>
         </div>

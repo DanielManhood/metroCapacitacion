@@ -28,7 +28,7 @@
                 if(isset($_GET['busNombre']) and !empty($_GET['busNombre'])) {
                     include '../inc/conexion.php';
                     $chequeo = mysql_real_escape_string(strtr(strtoupper($_GET['busNombre']), "áéíóú", "ÁÉÍÓÚ"));                
-                    $consultaNombre = "SELECT expediente, nombre FROM general WHERE nombre LIKE '%$chequeo%' ORDER BY nombre";
+                    $consultaNombre = "SELECT expediente, nombre, instructor, formacion FROM general WHERE nombre LIKE '%$chequeo%' ORDER BY nombre";
                     $hacerConsultaNombre = mysql_query($consultaNombre);
                     $resultados = mysql_num_rows($hacerConsultaNombre);
                     $archivoActual = basename($_SERVER['PHP_SELF']);
@@ -37,23 +37,38 @@
                               <br>
                               <table class='estiloTabla' id='texto'>
                                 <tr class='cabeceraTabla'>
-                                    <th colspan='4'>RESULTADOS: $resultados</th>
+                                    <th colspan='6'>RESULTADOS DE LA BUSQUEDA \"$chequeo\": $resultados</th>
                                 </tr>
                                 <tr class='cabeceraTabla'>
                                     <th>#</th>
                                     <th>Expediente</th>
                                     <th>Nombre</th>
+                                    <th>¿Instructor?</th>
+                                    <th>¿Curso de formación?</th>
                                     <th>Enlace</th>
                                 </tr>";                               
                         for($i = 0; $i < $resultados; $i++) {
                             $numero = $i + 1;
                             $expediente = mysql_result($hacerConsultaNombre, $i, "expediente");
                             $nombre = mysql_result($hacerConsultaNombre, $i, "nombre");
-                            
+                            $instructor = mysql_result($hacerConsultaNombre, $i, "instructor");
+                            if($instructor == 0){
+                                $instructor = "<font style='color: #DF0101'><b>NO</b></font>";
+                            } else {
+                                $instructor = "<font style='color: #04B404'><b>SI</b></font>";
+                            }
+                            $formacion = mysql_result($hacerConsultaNombre, $i, "formacion");
+                            if($formacion == 0){
+                                $formacion = "<font style='color: #DF0101'><b>NO</b></font>";
+                            } else {
+                                $formacion = "<font style='color: #04B404'><b>SI</b></font>";
+                            }
                             echo "<tr>
                                     <td>$numero</td>
                                     <td>$expediente</td>
                                     <td>$nombre</td>
+                                    <td>$instructor</td>
+                                    <td>$formacion</td>
                                     <td><a href='altaInstructores.php?BI=$expediente&pag=$archivoActual'>Ir al enlace</a></td>
                                   </tr>";
                         }
