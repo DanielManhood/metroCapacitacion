@@ -19,9 +19,8 @@
             </div>
             <div id="menu">
                 <ul>
-                    <li><a href='altaCursos.php'><img src="../img/abcnuevo.png"></a></li>
-                    <li><a href='modificarDatos.php'><img src="../img/abcmodificar.png"></a></li>
-                    <li><a href='.php'><img src="../img/abceliminar.png"></a></li>
+                    <li><a href='altaCursos.php'><img src="../img/abcnuevo.png"></a></li>                    
+                    <li><a href='busquedaEliminacionCursos.php'><img src="../img/abceliminar.png"></a></li>
 
                    
                 </ul>
