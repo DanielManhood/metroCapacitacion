@@ -95,7 +95,7 @@
                                         <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO LA PAZ'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO LA PAZ</option>
                                         <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO ROSARIO'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO ROSARIO</option>
                                         <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO TASQUEÑA'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO TASQUEÑA</option>
-                                        <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO TICOM´SN'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO TICOMÁN</option>
+                                        <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO TICOMÁN'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO TICOMÁN</option>
                                         <option value='COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO ZARAGOZA'>COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO ZARAGOZA</option>
                                         <option value='COORDINACIÓN DE REHABILITACIÓN DE TRENES'>COORDINACIÓN DE REHABILITACIÓN DE TRENES</option>
                                         <option value='COORDINACIÓN DE ELECTRÓNICA'>COORDINACIÓN DE ELECTRÓNICA</option>
