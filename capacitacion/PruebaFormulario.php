@@ -128,6 +128,7 @@
      <label>
         <span>Adscripción:</span><select name='adscripcion'>
         <option></option>
+                <option value='EXTERNOS'>EXTERNOS</option>
                 <option value='DIRECCIÓN DE MANTENIMIENTO DE MATERIAL RODANTE'>DIRECCIÓN DE MANTENIMIENTO DE MATERIAL RODANTE</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMÁN'>COORDINACIÓN DE MANTENIMIENTO MAYOR TICOMÁN</option>
                 <option value='COORDINACIÓN DE MANTENIMIENTO MAYOR ZARAGOZA'>COORDINACIÓN DE MANTENIMIENTO MAYOR ZARAGOZA</option>
