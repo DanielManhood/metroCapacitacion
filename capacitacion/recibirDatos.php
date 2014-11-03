@@ -30,7 +30,7 @@
                         echo "<div class='titulo'>DATOS INCOMPLETOS<br><a href='altaCursos.php?expediente=".$_POST['expediente']."&ini_curso=".$_POST['ini_curso']."&fin_curso=".$_POST['fin_curso']."
                             &nombreCursos=".$_POST['nombreCursos']."'>Regresar</div>";
                    } else {                 
-                        require 'conexion.php'; 
+                        require '../inc/conexion.php'; 
                         
                         $expediente = strtoupper(mysql_real_escape_string($_POST['expediente']));
                         $ini_curso = strtoupper(mysql_real_escape_string($_POST['ini_curso']));
