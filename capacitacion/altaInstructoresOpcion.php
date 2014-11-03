@@ -11,21 +11,16 @@
 <div id="content">
             <div id="nav">
                 <ul>
-                    <li><a href="capacitacion.php" title="Regresar"><img src="../img/baatras.png"></a></li>
+                    <li><a href="alta.php" title="Regresar"><img src="../img/baatras.png"></a></li>
                     <li><a href="../menu.php" title="Inicio"><img src="../img/bahome.png"></a></li>
                     <li><a href="contacto.php" title="Ayuda"><img src="../img/baayuda.png"></a></li>
                     <li><a href="close.php" title="Salir"><img src="../img/baasalir.png"></a></li>
                 </ul>
-            </div>
-            
- <div id="menu">
-                <ul>
-                    <li><a href='general.php'><img src="../img/ctgeneral.png" class="grande"></a></li>
-                     <li><a href='resumen.php'><img src="../img/bmresumen.png" class="grande"></a></li>
-                     <li><a href='busquedaq.php'><img src="../img/busquedaexpe_1.png" class="grande"></a></li>
-                     <li><a href='busquedaNombre.php'><img src="../img/busquedanom_1.png" class="grande"></a></li>
-                    
-                   
+            </div>           
+            <div id="menu">
+                <ul>       
+                     <li><a href='altaInstructoresX.php'><img src="../img/busquedaexpe_1.png" class="grande"></a></li>
+                     <li><a href='busquedaNombre.php'><img src="../img/busquedanom_1.png" class="grande"></a></li>                                       
                 </ul>
             </div>
         </div>

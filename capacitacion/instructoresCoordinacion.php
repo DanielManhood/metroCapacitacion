@@ -17,59 +17,56 @@
                     <li><a href="close.php" title="Salir"><img src="../img/baasalir.png"></a></li>
                 </ul>                            
             <?php                                      
-                if (isset($_GET['coordinacion'])) {
-                    $coordinacion = $_GET['coordinacion'];
+                if (!isset($_GET['coordinacion'])) {
+                    echo "<br><br><div class='titulo'>ERROR EN LA PÁGINA</div>";
                 } else {
-                    $coordinacion="";
-                    echo "<table class='tabla'>
-                            <tr><td>ERROR EN LA PÁGINA</td></tr>
-                        </table>";
-                }         
-                require '../inc/conexion.php';            
-                require 'claseEmpleado.php';
-                $consulta = "SELECT * FROM general WHERE instructor=TRUE AND coordinacion='$coordinacion';";
-                $hacerConsulta = mysql_query($consulta);
-                $numeroDeRegistros = mysql_num_rows($hacerConsulta);
+                    $coordinacion = $_GET['coordinacion'];                                                                            
+                    require '../inc/conexion.php';            
+                    require 'claseEmpleado.php';
+                    $consulta = "SELECT * FROM general WHERE instructor=TRUE AND coordinacion='$coordinacion';";
+                    $hacerConsulta = mysql_query($consulta);
+                    $numeroDeRegistros = mysql_num_rows($hacerConsulta);
         
-                if($numeroDeRegistros != 0) {
-                    echo "</div>
-                        <div class='titulo'>$coordinacion<br>Total: $numeroDeRegistros</div>
-                        <br>
-                        <br>";                        
-                    echo "<table class='tabla'>";
-                    echo "<thead>
-                            <th>Expediente</th>
-                            <th>Nombre</th>
-                            <th>Puesto</th>
-                            <th>Adscripción</th>
-                            <th>Ubicación</th>
-                            <th>Coordinación</th>
-                            <th>Plaza</th>
-                            <th>Siden</th>
-                            <th>Calidad</th>
-                            <th>Area</th>
-                            <th>Horario</th>
-                            <th>Descanso</th>
-                            <th>Estudios</th>
-                            <th>¿Concluidos?</th>
-                            <th>Extensión</th>
-                            <th>Correo</th>
-                            <th>¿Instructor?</th>
-                            <th>¿Curso de formación?</th>
-                            <th>Cursos que imparte</th>
-                        </thead>";
-                    $empleadoActual = new empleado();                        
-                    echo "<tbody>";
-                    for ($i = 0; $i < $numeroDeRegistros; $i++) {
-                        $empleadoActual->asignar($hacerConsulta, $i);
-                        $empleadoActual->imprimirEmpleado();
+                    if($numeroDeRegistros != 0) {
+                        echo "</div>
+                            <div class='titulo'>$coordinacion<br>Total: $numeroDeRegistros</div>
+                            <br>
+                            <br>";                        
+                        echo "<table class='tabla'>";
+                        echo "<thead>
+                                <th>Expediente</th>
+                                <th>Nombre</th>
+                                <th>Puesto</th>
+                                <th>Adscripción</th>
+                                <th>Ubicación</th>
+                                <th>Coordinación</th>
+                                <th>Plaza</th>
+                                <th>Siden</th>
+                                <th>Calidad</th>
+                                <th>Area</th>
+                                <th>Horario</th>
+                                <th>Descanso</th>
+                                <th>Estudios</th>
+                                <th>¿Concluidos?</th>
+                                <th>Extensión</th>
+                                <th>Correo</th>
+                                <th>¿Instructor?</th>
+                                <th>¿Curso de formación?</th>
+                                <th>Cursos que imparte</th>
+                            </thead>";
+                        $empleadoActual = new empleado();                        
+                        echo "<tbody>";
+                        for ($i = 0; $i < $numeroDeRegistros; $i++) {
+                            $empleadoActual->asignar($hacerConsulta, $i);
+                            $empleadoActual->imprimirEmpleado();
+                        }
+                        echo "</tbody>";
+                        echo "</table>";
+                    } else {                    
+                        echo "<br><br>
+                            <div class='titulo'>NO HAY REGISTROS DISPONIBLES</div>                        
+                            </div>";
                     }
-                    echo "</tbody>";
-                    echo "</table>";
-                } else {                    
-                    echo "<br><br>
-                        <div class='titulo'>NO HAY REGISTROS DISPONIBLES</div>                        
-                        </div>";
                 }
             ?>                   
         </div>

@@ -96,12 +96,12 @@
                 $this->formacion="NO";
             }
             $this->cadena="";
-            $cursosConsulta = "SELECT * FROM cursos WHERE expediente=$this->expediente;";
+            $cursosConsulta = "SELECT * FROM cursosimpartidos WHERE expedienteInstructor=$this->expediente;";
             $hacerCursos = mysql_query($cursosConsulta);
             $this->numCursos = mysql_num_rows($hacerCursos);
             if($this->numCursos != 0) {
                 for($i = 0; $i < $this->numCursos; $i++) {                
-                    $this->temp=mysql_result($hacerCursos, $i, "nom_curso");
+                    $this->temp=mysql_result($hacerCursos, $i, "idCurso");
                     $this->nC = "SELECT * FROM nombrecursos WHERE id=$this->temp;";
                     $this->consultaNC = mysql_query($this->nC);
                     $this->resCurso = mysql_result($this->consultaNC, 0, "nomCurso");

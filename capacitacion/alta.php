@@ -18,7 +18,7 @@
             </div>
             <div id="menu">
                 <ul>
-                    <li><a href='altaInstructores.php'><img src="../img/cinstruc_1.png" class="grande"></a></li>
+                    <li><a href='altaInstructoresOpcion.php'><img src="../img/cinstruc_1.png" class="grande"></a></li>
                     <li><a href='altaCursos.php'><img src="../img/ccursos_1.png" class="grande"></a></li>
                     <li><a href='.php'><img src="../img/coficios_2.png" class="grande"></a></li>
                     <li><a href='.php'><img src="../img/cmanuales_1.png" class="grande"></a></li>
