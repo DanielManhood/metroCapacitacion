@@ -228,7 +228,7 @@
                         <td><?php echo $resultado; ?></td>
                     </tr>            
                     <?php
-                        $consulta = "SELECT * FROM general WHERE coordinacion=\"COORDINACIÓN DE SUPERVISIÓN Y FABRICACIÓN DE TRENES\";";
+                        $consulta = "SELECT * FROM general WHERE coordinacion=\"COORDINACIÓN DE SUPERVISIÓN DE FABRICACIÓN DE TRENES\";";
                         $hacerConsulta = mysql_query($consulta);
                         $numeroDeRegistros = mysql_num_rows($hacerConsulta); 
                         $total=$total+$numeroDeRegistros;
@@ -263,6 +263,19 @@
                     ?>
                     <tr>
                         <td>COORDINACIÓN DE PROGRAMACIÓN Y EVALUACIÓN</td>
+                        <td><?php echo $numeroDeRegistros; ?></td> 
+                        <td><?php echo $resultado; ?></td>
+                    </tr>
+                    <?php
+                        $consulta = "SELECT * FROM general WHERE coordinacion=\"DIRECCIÓN DE MANTENIMIENTO DE MATERIAL RODANTE\";";
+                        $hacerConsulta = mysql_query($consulta);
+                        $numeroDeRegistros = mysql_num_rows($hacerConsulta);     
+                        $total=$total+$numeroDeRegistros;
+                        $resultado = totalCapacitados($hacerConsulta);
+                        $totalCapacitados+=$resultado;
+                    ?>
+                    <tr>
+                        <td> 	DIRECCIÓN DE MANTENIMIENTO DE MATERIAL RODANTE</td>
                         <td><?php echo $numeroDeRegistros; ?></td> 
                         <td><?php echo $resultado; ?></td>
                     </tr>

@@ -71,7 +71,7 @@
                         $titulo = mysql_result($hacerListado, $i, "titulo");
                         $tipo = mysql_result($hacerListado, $i, "tipo");                        
                         $nombreArchivo = mysql_result($hacerListado, $i, "nombreArchivo");
-                        $actualizado = mysql_result($hacerListado, $i, "actualizado");
+                        $actualizado = @mysql_result($hacerListado, $i, "actualizado");
                         echo "<tr>
                                 <td nowrap>$clave</td>
                                 <td>$titulo</td>";                                                                

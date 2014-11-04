@@ -36,17 +36,38 @@
                         $ini_curso = strtoupper(mysql_real_escape_string($_POST['ini_curso']));
                         $fin_curso = strtoupper(mysql_real_escape_string($_POST['fin_curso']));
                         $nombreCursos= mysql_real_escape_string($_POST['nombreCursos']);
-                        $buscarEmpleado = "SELECT * FROM general WHERE expediente=$expediente";
+                        if (is_numeric ($expediente)){
+                            $buscarEmpleado = "SELECT * FROM general WHERE expediente=$expediente";
+                            
+                        }
+                        else if (is_string($expediente)){
+                            $buscarEmpleado = "SELECT * FROM general WHERE nombre= '$expediente'";
+                        }
+                       
                         $hacerBusqueda = mysql_query($buscarEmpleado);
                         $commprobar = mysql_num_rows($hacerBusqueda);
                         if ($commprobar == 0) {
                             echo "<div class='titulo'>ERROR, NO EXISTE EL EXPEDIENTE</div>";
-                        } else {                                                    
-                            $consulta1= "SELECT * FROM cursos  WHERE expediente= '$expediente' AND ini_curso = '$ini_curso' AND fin_curso = '$fin_curso' AND  
+                        } else {  
+                            if (is_numeric ($expediente)){
+                                $consulta1= "SELECT * FROM cursos  WHERE expediente= '$expediente' AND ini_curso = '$ini_curso' AND fin_curso = '$fin_curso' AND  
                                               nom_curso = '$nombreCursos';";
+                                
+                            }
+                            else if (is_string($expediente)){
+                                $nuevoExpediente= mysql_result($hacerBusqueda, 0,"expediente");
+                                $consulta1= "SELECT * FROM cursos  WHERE expediente= '$nuevoExpediente' AND ini_curso = '$ini_curso' AND fin_curso = '$fin_curso' AND  
+                                              nom_curso = '$nombreCursos';";
+                            }
+                              
                             $registro1 =  mysql_query($consulta1) or die (mysql_error());               
-                            if(mysql_num_rows($registro1)== 0) {                            
-                                $consulta = "INSERT INTO cursos (expediente,ini_curso,fin_curso,nom_curso) VALUES ('$expediente','$ini_curso','$fin_curso','$nombreCursos');";
+                            if(mysql_num_rows($registro1)== 0) {  
+                                if (is_numeric ($expediente)){
+                                    $consulta = "INSERT INTO cursos (expediente,ini_curso,fin_curso,nom_curso) VALUES ('$expediente','$ini_curso','$fin_curso','$nombreCursos');";
+                                }
+                                 else if (is_string($expediente)){
+                                     $consulta = "INSERT INTO cursos (expediente,ini_curso,fin_curso,nom_curso) VALUES ('$nuevoExpediente','$ini_curso','$fin_curso','$nombreCursos');";
+                                 }
                                 $realizarconsulta = mysql_query($consulta) or die (mysql_error());
                              echo "<div class='titulo'>ALTA DE CURSOS EXITOSA</div>";                                                 
                             }       

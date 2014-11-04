@@ -86,7 +86,7 @@
                         <h1>CAPTURA DE CURSOS
                         <span>INGRESA LOS SIGUIENTES DATOS PARA AGREGAR UN NUEVO CURSO</span>
                            </h1>
-                        <label><span>Expediente:</span> </label> 
+                        <label><span>Expediente ó nombre completo (AAN):</span> </label> 
                         <input type="text" name="expediente"  value="<?php echo $expediente; ?>" /><br>
                         <label><span> Seleccionar Fecha inicio:</span></label> 
                         <input type="text" name="ini_curso" id="datepicker" readonly="readonly" size="12"  value="<?php echo $datepicker;?>"/> <br>

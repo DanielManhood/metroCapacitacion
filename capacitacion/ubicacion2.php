@@ -17,7 +17,7 @@
             </div>
             <div id="menu">
                 <ul>                                        
-                    <li><a href='<?php echo "instructoresUbicacion.php?ubicacion=COORDINACIÓN DE REHABILITACIÓN DE TRENES"?>'><img src="../img/Zcoorsuper.png" class="grande"></a></li>
+                    <li><a href='<?php echo "instructoresUbicacion.php?ubicacion=COORDINACIÓN DE SUPERVISION DE FABRICACIÓN DE TRENES"?>'><img src="../img/Zcoorsuper.png" class="grande"></a></li>
                     <li><a href='<?php echo "instructoresUbicacion.php?ubicacion=COORDINACIÓN DE ELECTRÓNICA"?>'><img src="../img/Zcoorelectr.png" class="grande"></a></li>                                                           
                     <li><a href='<?php echo "instructoresUbicacion.php?ubicacion=COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO ZARAGOZA"?>'><img src="../img/Zcoorzar.png" class="grande"></a></li>
                     <li><a href='<?php echo "instructoresUbicacion.php?ubicacion=COORDINACIÓN DE MANTENIMIENTO SISTEMÁTICO CONSTITUCIÓN 1917"?>'><img src="../img/Zcoorcons.png" class="grande"></a></li>

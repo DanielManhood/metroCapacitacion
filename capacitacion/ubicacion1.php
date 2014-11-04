@@ -265,7 +265,20 @@
                         <td>JEFATURA TICOMÁN</td>
                         <td><?php echo $numeroDeRegistros; ?></td> 
                         <td><?php echo $resultado; ?></td>
-                    </tr>            
+                    </tr>    
+                    <?php
+                        $consulta = "SELECT * FROM general WHERE ubicacion=\"DIRECCIÓN DE MANTENIMIENTO DE MATERIAL RODANTE\";";
+                        $hacerConsulta = mysql_query($consulta, $conexion);
+                        $numeroDeRegistros = mysql_num_rows($hacerConsulta); 
+                        $total=$total+$numeroDeRegistros;
+                        $resultado = totalCapacitados($hacerConsulta, $conexion);
+                        $totalCapacitados+=$resultado;                        
+                    ?>
+                    <tr>
+                        <td>DIRECCIÓN DE MANTENIMIENTO DE MATERIAL RODANTE</td>
+                        <td><?php echo $numeroDeRegistros; ?></td> 
+                        <td><?php echo $resultado; ?></td>
+                    </tr>     
                     <?php
                         $consulta = "SELECT * FROM general WHERE ubicacion=\"ADMINISTRACIÓN DE MATERIALES\";";
                         $hacerConsulta = mysql_query($consulta, $conexion);
@@ -298,7 +311,8 @@
                             AND ubicacion<>\"COORDINACIÓN DE SUPERVISIÓN DE FABRICACIÓN DE TRENES\"
                             AND ubicacion<>\"COORDINACIÓN DE ELECTRÓNICA\"
                             AND ubicacion<>\"COORDINACIÓN DE PROGRAMACIÓN Y EVALUACIÓN (JEFATURA TICOMÁN)\"
-                            AND ubicacion<>\"ADMINISTRACIÓN DE MATERIALES\";";
+                            AND ubicacion<>\"ADMINISTRACIÓN DE MATERIALES\"
+                            AND ubicacion<>\"DIRECCIÓN DE MANTENIMIENTO DE MATERIAL RODANTE\";";
                         $hacerConsulta = mysql_query($consulta, $conexion);
                         $numeroDeRegistros = mysql_num_rows($hacerConsulta);     
                         $total=$total+$numeroDeRegistros;

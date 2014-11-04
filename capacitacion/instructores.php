@@ -177,13 +177,13 @@
                         <td><?php echo $numeroDeRegistros; ?></td>                
                     </tr>
                     <?php
-                        $consulta = "SELECT * FROM general WHERE instructor=TRUE AND coordinacion=\"COORDINACIÓN DE SUPERVISIÓN Y FABRICACIÓN DE TRENES\";";
+                        $consulta = "SELECT * FROM general WHERE instructor=TRUE AND coordinacion=\"COORDINACIÓN DE SUPERVISIÓN DE FABRICACIÓN DE TRENES\";";
                         $hacerConsulta = mysql_query($consulta, $conexion);
                         $numeroDeRegistros = mysql_num_rows($hacerConsulta); 
                         $total=$total+$numeroDeRegistros;
                     ?>
                     <tr>
-                        <td>COORDINACIÓN DE SUPERVISIÓN Y FABRICACIÓN DE TRENES</td>
+                        <td>COORDINACIÓN DE SUPERVISIÓN DE FABRICACIÓN DE TRENES</td>
                         <td><?php echo $numeroDeRegistros; ?></td>                
                     </tr>
                     <?php
@@ -205,7 +205,17 @@
                     <tr>
                         <td>COORDINACIÓN DE PROGRAMACIÓN Y EVALUACIÓN</td>
                         <td><?php echo $numeroDeRegistros; ?></td>                
-                    </tr>            
+                    </tr>           
+                    <?php
+                        $consulta = "SELECT * FROM general WHERE instructor=TRUE AND coordinacion=\"DIRECCIÓN DE MANTENIMIENTO DE MATERIAL RODANTE\";";
+                        $hacerConsulta = mysql_query($consulta, $conexion);
+                        $numeroDeRegistros = mysql_num_rows($hacerConsulta);     
+                        $total=$total+$numeroDeRegistros;
+                    ?>
+                    <tr>
+                        <td>DIRECCIÓN DE MANTENIMIENTO DE MATERIAL RODANTE</td>
+                        <td><?php echo $numeroDeRegistros; ?></td>                
+                    </tr>           
                     <tr>               
                         <th>Total: </th>
                         <th><?php echo $total; ?></th>
