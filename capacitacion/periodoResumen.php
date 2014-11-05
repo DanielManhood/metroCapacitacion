@@ -1,7 +1,7 @@
 <html>
     <head>
         <?php 
-            if(isset($_POST['selector'])) {
+            if(isset($_POST['selector']) and !empty($_POST['selector'])) {
                 $selector = $_POST['selector'];
             } else {
                 $selector = date("Y");
@@ -39,12 +39,13 @@
                     <button type="submit">Consultar</button>
                 </form>  
                 <br>
-                <br>
+                <br>                
                 <?php
                     $consultaAnnio = "SELECT * FROM cursos WHERE YEAR( ini_curso ) =$selector ORDER BY ini_curso, fin_curso, nom_curso;";
                     $consultaRealizada=  mysql_query($consultaAnnio);
                     $prueba= mysql_num_rows($consultaRealizada);
                     if($prueba != 0){
+                        echo "<div class='titulo'>PERIODO: $selector</div><br>";
                         $info = new periodoResumen();
                         $info->imprimir();
                         $info->obtenerDatos($consultaRealizada);
