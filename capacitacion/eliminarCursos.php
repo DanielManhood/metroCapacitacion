@@ -53,18 +53,18 @@
                         </table>
                         <br>
                         <br>
-                        <br>                
-                        <table class='estiloTabla' style='width: 100%'>
-                            <tr class='cabeceraTabla'>
-                                <th>NOMBRE DEL CURSO</th>
-                                <th>INICIO DEL CURSO</th>
-                                <th>FIN DEL CURSO</th>
-                                <th>ELIMINAR</th>
-                            </tr>";                    
-                            $consultaCursos = "SELECT * FROM cursos WHERE expediente=$expediente ORDER BY ini_curso;";
-                            $hacerConsultaCursos = mysql_query($consultaCursos);
-                            $numCursos = mysql_num_rows($hacerConsultaCursos);
-                        
+                        <br>";
+                        $consultaCursos = "SELECT * FROM cursos WHERE expediente=$expediente ORDER BY ini_curso;";
+                        $hacerConsultaCursos = mysql_query($consultaCursos);
+                        $numCursos = mysql_num_rows($hacerConsultaCursos);
+                        if($numCursos != 0){                                                    
+                            echo "<table class='estiloTabla' style='width: 100%'>
+                                    <tr class='cabeceraTabla'>
+                                        <th>NOMBRE DEL CURSO</th>
+                                        <th>INICIO DEL CURSO</th>
+                                        <th>FIN DEL CURSO</th>
+                                        <th>ELIMINAR</th>
+                                    </tr>";                                                                        
                             for($i = 0; $i < $numCursos; $i++) {
                                 $id = mysql_result($hacerConsultaCursos, $i, "id");
                                 $nom_curso = mysql_result($hacerConsultaCursos, $i, "nom_curso");
@@ -81,7 +81,10 @@
                                     <td><a href='eliminarCursos.php?id=".$id."&expediente=".$expediente."'><img src='../img/eliminar.png' style='width: 50px; height: 50px;'></a></td>
                                 </tr>";
                             }
-                        echo "</table>";
+                            echo "</table>";
+                        } else {
+                            echo "<div class='titulo'>NO TIENE CURSOS ASIGNADOS</div>";  
+                        }
                     }
                 ?>                
             </div>                        
