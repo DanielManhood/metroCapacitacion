@@ -1,14 +1,5 @@
 <html>
     <head>
-        <?php 
-            if(isset($_POST['selector'])) {
-                $selector = $_POST['selector'];
-            } else {
-                $selector = date("Y");
-            }
-            require '../inc/conexion.php';
-            require 'claseEmpleado.php';
-        ?>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>PERIODO/RESUMEN</title>
@@ -29,7 +20,7 @@
                 <br>
                 <form name="annio" id="annio" action="periodoResumen.php" method="post"> ELIJA UN PERIODO
                     <select name="selector" id="selector">
-                        <option value=""></option>
+                        <option></option>
                         <option value="2014">2014</option>
                         <option value="2013">2013</option>
                         <option value="2012">2012</option>
@@ -40,7 +31,15 @@
                 </form>  
                 <br>
                 <br>
-                <?php
+                <?php 
+                    require '../inc/conexion.php';
+                    if(isset($_POST['selector']) and !empty($_POST['selector'])) {
+                        $selector = $_POST['selector'];
+                    } else {
+                        $selector = date("Y");
+                    }
+                    echo "<div class='titulo'>PERIODO: $selector</div><br><br>";                    
+                    require 'claseEmpleado.php';                    
                     $consultaAnnio = "SELECT * FROM cursos WHERE YEAR( ini_curso ) =$selector ORDER BY ini_curso, fin_curso, nom_curso;";
                     $consultaRealizada=  mysql_query($consultaAnnio);
                     $prueba= mysql_num_rows($consultaRealizada);
