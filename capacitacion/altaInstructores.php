@@ -73,7 +73,7 @@
                 $expediente = $_GET['BI'];
                 $cambiarStatus = "UPDATE general SET instructor=$instructor, formacion=$formacion WHERE expediente=$expediente;";
                 $hacerCambioStatus = mysql_query($cambiarStatus);
-        }                
+        }
     ?>
     <body>
         <div id="content">
@@ -177,6 +177,9 @@
                         echo "<br><br>
                             <div class='titulo' style='width: 50%'>ERROR: No se ha tecleado un número</div>";
                     }                    
+                } else {
+                    echo "<br><br>
+                            <div class='titulo' style='width: 50%'>ERROR: No se ha introducido datos</div>";
                 }
             ?>
         </div>

@@ -13,7 +13,7 @@
             <div id="nav">
                 <ul>
                     <li><a href="personal1.php" title="Regresar"><img src="../img/baatras.png"></a></li>
-                    <li><a href="menu.php" title="Inicio"><img src="../img/bahome.png"></a></li>
+                    <li><a href="../menu.php" title="Inicio"><img src="../img/bahome.png"></a></li>
                     <li><a href="ayuda.php" title="Ayuda"><img src="../img/baayuda.png"></a></li>
                     <li><a href="close.php" title="Salir"><img src="../img/baasalir.png"></a></li>
                 </ul>    

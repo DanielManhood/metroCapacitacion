@@ -37,15 +37,14 @@
                         $numReg = mysql_num_rows($hacerConsulta);
                         if($numReg == 0) {
                             $update = "INSERT INTO nombrecursos(nomCurso) VALUES ('$cursoNuevo');";
-                            $query = mysql_query($update);
-                            echo $update;
+                            $query = mysql_query($update);                            
                             if($query){
-                                echo "PROCESO CORRECTO";
-                            } else {
-                                echo "PROCESO FALLIDO";
+                                echo "<div class='titulo'>ALTA EXITOSA<br>EL CURSO DE \"$cursoNuevo\" YA ESTA DISPONIBLE EN EL MENÚ<br>
+                                        </div>";
+                            } else {                                
                             }
                         } else {
-                            echo "EL CURSO YA EXISTE";
+                            echo "<div class='titulo'>CURSO DISPONIBLE<br>";
                         }                        
                     }
                 ?>
