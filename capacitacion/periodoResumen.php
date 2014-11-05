@@ -29,7 +29,7 @@
                 <br>
                 <form name="annio" id="annio" action="periodoResumen.php" method="post"> ELIJA UN PERIODO
                     <select name="selector" id="selector">
-                        <option value=""></option>
+                        <option></option>
                         <option value="2014">2014</option>
                         <option value="2013">2013</option>
                         <option value="2012">2012</option>
