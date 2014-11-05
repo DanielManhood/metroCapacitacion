@@ -134,7 +134,7 @@
                                                 <td>$nombreCurso</td>
                                                 <td>$buIniCurso</td>
                                                 <td>$buFinCurso</td>
-                                                <td><a href='altaInstructores.php?id=$id&BI=$BI'><img src='../img/eliminar.png' style='width: 50px; height: 50px;'></a></td>    
+                                                <td><a href='altaInstructores.php?id=$id&BI=$BI'>Eliminar</a></td>    
                                             </tr>";
                                         
                                     }

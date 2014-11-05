@@ -20,7 +20,7 @@
                 <?php
                     require '../inc/conexion.php';
                     $lista = 0;
-                    if(isset($_POST['lista']) and !empty($_POST['lista'])) {
+                    if(isset($_POST['lista'])) {
                         $lista = $_POST['lista'];                        
                     } else {
                         $lista = "1";                        
